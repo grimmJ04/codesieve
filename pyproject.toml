@@ -1,0 +1,27 @@
+[build-system]
+requires = [
+    "setuptools>=61.0.0",
+    "numpy>=1.26.2",
+    "tree-sitter>=0.20.4",
+    "tree-sitter-languages>=1.8.0"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "codesieve"
+version = "0.1.0"
+authors = [
+    { name = "grimmJ04", email = "hoda@inf.u-szeged.hu" },
+]
+description = "A small package for extracting code changes on line, function or class level."
+readme = "readme.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+keywords = ["code", "text", "pre-processing"]
+
+[project.urls]
+Homepage = "https://github.com/AAI-USZ/codesieve.git"

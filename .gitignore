@@ -1,0 +1,13 @@
+# local devel
+.idea
+.vscode
+venv
+temp
+
+# build files
+build
+dist
+**/*.egg-info
+
+# some hidden playground files
+doit.py

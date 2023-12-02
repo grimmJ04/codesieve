@@ -8,6 +8,7 @@ temp
 build
 dist
 **/*.egg-info
+**/__pycache__
 
 # some hidden playground files
 doit.py

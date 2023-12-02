@@ -1,3 +1,82 @@
+# CodeSieve
+
+The package _codesieve_ is a pip installable package
+to help developers and/or researchers in mining software repositories.
+
+To install, run
+
+> pip install <path/to/codesieve>
+
+from any python virtual environment.
+
+Anyone can freely customize the library, make copies, or modify the code, or simply use it as is.
+
+<details>
+<summary>Example usage</summary>
+
+```python
+from tree_sitter_languages import get_parser
+
+from codesieve import data
+
+src_java = """
+import java.util.List;
+
+class Greeter implements IGreeter {
+    public void Hello() {
+        System.out.println("Goodbye World!");
+    }
+    
+    public void DumDum() {
+        System.out.println("Some things never change ...");
+    }
+    
+    public void BeProductive(List<double> values) {
+        double prod = 0;
+        foreach (var val in values) {
+            prod *= val;
+        }
+    }
+}
+"""
+tgt_java = """
+import java.util.List;
+
+class Greeter implements IGreeter {
+    // Say hello instead
+    public void Hello() {
+        System.out.println("Hello World!");
+    }
+    
+    public void DumDum() {
+        System.out.println("Some things never change ...");
+    }
+    
+    public double BeProductive(List<Double> values) {
+        double prod = 1.0;
+        for (var val : values) {
+            prod *= val;
+        }
+        return prod;
+    }
+}
+"""
+parser = get_parser('java')
+parts = data.datasieve(parser, parser, src_java, tgt_java, clazz='function', level=1, dist='s2s')
+# example output
+[
+    (
+        'public void Hello() {\n        System.out.println("Goodbye World!");\n    }',
+        'public void Hello() {\n        System.out.println("Hello World!");\n    }'
+    ),
+    (
+        'public void BeProductive(List<double> values) {\n        double prod = 0;\n        foreach (var val in values) {\n            prod *= val;\n        }\n    }',
+        'public double BeProductive(List<Double> values) {\n        double prod = 1.0;\n        for (var val : values) {\n            prod *= val;\n        }\n        return prod;\n    }'
+    )
+]
+```
+</details>
+
 # XPlainHub Dataset
 
 XPlainHub is a multi-linguistic dataset consisting of 5 popular programming languages, mined from more than 7500 GitHub repositories containing 371483 methods extracted from code from 250090 bug-fixing commits. Most importantly, the dataset includes the buggy, and the fixed version of methods extracted from the bugfixing commit. It also contains some additional information like the commit message, or the commit diff information.

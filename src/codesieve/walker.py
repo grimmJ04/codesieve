@@ -1,6 +1,7 @@
 from tree_sitter import Tree
 
 
+# See more: https://github.com/tree-sitter/py-tree-sitter/issues/33#issuecomment-864557166)
 def treewalk(node: Tree):
     cursor = node.walk()
     isroot = False

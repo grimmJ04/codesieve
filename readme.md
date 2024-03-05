@@ -79,7 +79,7 @@ parts = data.datasieve(parser, parser, src_java, tgt_java, clazz='function', lev
 
 # XPlainHub Dataset
 
-XPlainHub is a multi-linguistic dataset consisting of 5 popular programming languages, mined from more than 7500 GitHub repositories containing 371483 methods extracted from code from 250090 bug-fixing commits. Most importantly, the dataset includes the buggy, and the fixed version of methods extracted from the bugfixing commit. It also contains some additional information like the commit message, or the commit diff information.
+XPlainHub is a multi-linguistic dataset consisting of 5 popular programming languages, mined from more than 7500 GitHub repositories from wich 5273 contained bug-fixes based on our criteria, containing 371483 methods extracted from code from 250090 bug-fixing commits. Most importantly, the dataset includes the buggy, and the fixed version of methods extracted from the bugfixing commit. It also contains some additional information like the commit message, or the commit diff information.
 
 ## Data Format
 
@@ -122,49 +122,3 @@ of the mined programs, while _Size_ measures the UTF-8 encoded length of the sou
 in mebibytes. The summary of sample, and size information is a cumulative value of the
 separate samples, while both _mean_ and _median_ character values are averaged over the buggy
 and fixed codes.
-
-## Dataset
-
-To access the dataset visit: https://zenodo.org/records/10198721
-
-## Citation
-
-If you find useful methods in this package you can site us with:
-
-### Paper
-
-This work is submitted for the
-[21st International Conference on Mining Software Repositories](https://2024.msrconf.org/).
-
-**BibTeX:**
-```
-@misc{XPlainHub:hpaper2023,
-  author       = {Horváth Dániel},
-  title        = {Yet Another GitHub Mined Dataset: XPlainHub},
-  year         = 2024,
-  publisher    = {???},
-  doi          = {???},
-}
-```
-
-___
-
-### Dataset
-
-**BibTeX:**
-```
-@dataset{XPlainHub:hdata2023,
-  author       = {Horváth Dániel},
-  title        = {XPlainHub},
-  month        = nov,
-  year         = 2023,
-  publisher    = {Zenodo},
-  version      = {1.0.0},
-  doi          = {10.5281/zenodo.10198721},
-  url          = {https://doi.org/10.5281/zenodo.10198721}
-}
-```
-
-___
-
-

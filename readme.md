@@ -77,9 +77,9 @@ parts = data.datasieve(parser, parser, src_java, tgt_java, clazz='function', lev
 ```
 </details>
 
-# XPlainHub Dataset
+# CodegrainHouse Dataset
 
-XPlainHub is a multi-linguistic dataset consisting of 5 popular programming languages, mined from more than 7500 GitHub repositories from wich 5273 contained bug-fixes based on our criteria, containing 371483 methods extracted from code from 250090 bug-fixing commits. Most importantly, the dataset includes the buggy, and the fixed version of methods extracted from the bugfixing commit. It also contains some additional information like the commit message, or the commit diff information.
+CodegrainHouse is a multi-linguistic dataset consisting of 5 popular programming languages, mined from more than 7500 GitHub repositories from wich 5273 contained bug-fixes based on our criteria, containing 371483 methods extracted from code from 250090 bug-fixing commits. Most importantly, the dataset includes the buggy, and the fixed version of methods extracted from the bugfixing commit. It also contains some additional information like the commit message, or the commit diff information.
 
 ## Data Format
 
